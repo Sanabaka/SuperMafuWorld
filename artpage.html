@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="with=decide-width, initial-scale=1.0">
+   <title>Home Page</title>
+   <link rel="stylesheet" href="style.css" type="text/css"/>
+   <!--the following is the font but it doesn't work-->
+   <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css>
+   <link rel="stylesheet" href="lightbox.css">
+</head>
+
+
+<body bgcolor=white>
+
+<section class="sub-header">
+  <nav id="navbar">
+    <img src="images/logo.png" class="logo">
+    <div class="nav-links" id="navLinks">
+      <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul id="menu">
+          <li><a href="">HOME</a></li>
+          <li><a href="">ART</a></li> <!--animation in here too-->
+          <li><a href="">LETTERS</a></li>
+          <li><a href="">MUSIC</a></li>
+          <li><a href="">LOW EFFORT WORK</a></li>
+          <li><a href="">CONTACT US</a></li>
+        </ul>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+
+  </nav>
+  <h1>Welcome to the Art section!</h1>
+</section>
+
+<!--________Artpage_______-->
+
+<section class="art-page">
+
+  <div class="row">
+    <div class="art-page-col">
+      <h1>-Rules-</h1>
+      <p> Every once in a while, Artists are given a specific theme and deadline. <br>
+      After the deadline, the works are posted here and classified by dates and themes. <br><br>
+      ||Remember to write your @, date of completion and the country you're from.||</p>
+      <a href="" class="hero-btn pink-btn">ADD MY WORK</a>
+    </div>
+  </div>
+
+</section>
+
+<!--______Gallery itself_______-->
+<div class="full-img" id="fullimgBox">
+  <img src="https://cdn.discordapp.com/attachments/1203404240152698920/1225524738911371344/mafu_project.png?ex=66dff29a&is=66dea11a&hm=47c1ac65184dca2469d5d42dd9a555657c3c36438b59351ecf2fddf370375f75&" alt="koi" id="fullimg">
+  <span onclick="closeFullImg()"><i class="fa-solid fa-x"></i></span>
+</div>
+
+<div class="container">
+  <div class="photo-gallery">
+    <a href="https://cdn.discordapp.com/attachments/1203404240152698920/1225524738911371344/mafu_project.png?ex=66dff29a&is=66dea11a&hm=47c1ac65184dca2469d5d42dd9a555657c3c36438b59351ecf2fddf370375f75&" data-lightbox="fanartys" data-title="caption1">
+      <img src="https://cdn.discordapp.com/attachments/1203404240152698920/1225524738911371344/mafu_project.png?ex=66dff29a&is=66dea11a&hm=47c1ac65184dca2469d5d42dd9a555657c3c36438b59351ecf2fddf370375f75&">
+    </a>
+    
+    <div class="column"> <!--Art shows in 3 columns-->
+      <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1203404240152698920/1225524738911371344/mafu_project.png?ex=66dff29a&is=66dea11a&hm=47c1ac65184dca2469d5d42dd9a555657c3c36438b59351ecf2fddf370375f75&" alt="koi" onclick="openFullImg(this.src)">
+      </div>
+      <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1203404240152698920/1222062029339103242/Illustration8.png?ex=66dfdff4&is=66de8e74&hm=f644ad9628cf8153f755ce150049eec48b0b12a88d79d673b2062b78e0dbbe2b&" alt="fushiosushio" onclick="openFullImg(this.src)">
+      </div>
+      <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1203404240152698920/1224842974928568460/Untitled1072_20240331005326.png?ex=66e01aa9&is=66dec929&hm=b1162d44e5232757f2133626f57b7454c5b9c4c58cd85ba839b97180fb85a899&" alt="A t t i c" onclick="openFullImg(this.src)">
+      </div>
+    </div>
+    <div class="column">
+      <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1203404240152698920/1214412987494961152/20240304211504.png?ex=66dfbbba&is=66de6a3a&hm=e4034aec63611588c6c3c75494b040fc8b0c49824c5021018717e8cb466f2af7&" alt="uni-niinya" onclick="openFullImg(this.src)">
+      </div>
+      <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1203404240152698920/1211248466244931584/Untitled27.png?ex=66e0160a&is=66dec48a&hm=95b753c3fa9ad23b32db76d1d39ad0cad163b5bd5d0054d86ad5f81e8f173a0e&" alt="marieus" onclick="openFullImg(this.src)">
+      </div>
+      <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1203404240152698920/1211846935791534161/51_sin_titulo.png?ex=66dfa068&is=66de4ee8&hm=bbc1d92132021658d11436b7c8471476bb94d9f5c377f2c41206d9a1ac7f3ae0&" alt="potaru" onclick="openFullImg(this.src)">
+      </div>
+    </div>
+    <div class="column">
+      <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1203404240152698920/1217101373905043466/IMG_0282.png?ex=66e048fc&is=66def77c&hm=7a4acaf8854758c6e7013a317386ce75ea81ebf881885aab96dd49a7a84f03b9&" alt="" onclick="openFullImg(this.src)">
+      </div>
+      <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1203404240152698920/1207889207046053908/Untitled3_20240215214809.png?ex=66e063bc&is=66df123c&hm=5c1f6200193abc3b1a7663a5244db55c8b14f3d153d549091bc9f1c85bacc7a6&" alt="" onclick="openFullImg(this.src)">
+      </div>
+      <div class="photo">
+        <img src="https://cdn.discordapp.com/attachments/1203404240152698920/1207235528131477545/20240205_091227.jpg?ex=66dffd33&is=66deabb3&hm=974025095eabc992c5e7f0b276ae46ee155aee73f8ba9a6481f6f82b182eaf91&" alt="" onclick="openFullImg(this.src)">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="lightbox-plus-jquery.js"></script>
+
+<!--_____JavaScript to keep the menu bar at the top when scrolling-->
+<script>
+
+var navbar = document.getElementById("navbar")
+var menu = document.getElementById("menu")
+
+window.onscroll = function(){
+  if(window.pageYOffset >= menu.offsetTop){
+    navbar.classList.add("sticky");
+  }
+  else{
+    navbar.classList.remove("sticky");
+  }
+}
+
+</script>
+
+<!-- Footer -->
+
+<section class="footer">
+  <h2>✩♬ ₊˚.🎧⋆☾⋆⁺₊✧ ( '﹃'⑉)⋆.˚✮🎧✮˚.⋆</h2>
+  <p>Everything here is made with love. Please refrain from stealing<br>
+     others' works and behave like a decent citizen of SuperMafuWorld.</p>
+
+     <div class="icons">
+       <a href="https://discord.gg/nQWg7t9v">
+         <i class="fa-brands fa-discord"></i>
+       </a>
+       <a href="https://x.com/i/communities/1831136008164815188">
+         <i class="fa-brands fa-twitter"></i>
+       </a>
+     </div>
+  <p>Made by @Sanabaka115 with her exclusive Pack of <i class="fa-solid fa-heart"></i></p>
+
+</section>
+
+<!--_____JavaScript for Toggle Menu_____-->
+<script>
+var navLinks = document.getElementById("navLinks");
+function showMenu(){
+  navLinks.style.right = "0";
+}
+function hideMenu(){
+  navLinks.style.right = "-210px";
+}
+
+</script>
+
+</body>
+</html>

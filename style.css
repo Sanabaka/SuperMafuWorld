@@ -1,0 +1,411 @@
+{
+  margin:0;
+  padding:0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*I used different tutorials and tried various methods for one same thing etc
+eventho I made sure to remove the repeated lines/useless lines; there might
+still be some left. Please delete if you find them (;u;)*/
+
+h1 {
+  font-family: "Handjet", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+p{
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.header{
+  height:100vh;
+  width: 100%;
+  background-image:linear-gradient(rgba(15,9,30,0.5),rgba(15,9,30,0.5)),url(images/banniere.png);
+  background-position:center;
+  background-size:cover;
+  position:relative;
+}
+nav{
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+
+}
+.logo{
+  width:250px;
+  cursor: pointer;
+  margin: 20px 10px;
+}
+@media(max-width: 700px){
+  nav img{
+    width: 100px;
+  }
+}
+/* Need to fix: Menu bar links to other pages(ofc they don't work)*/
+.nav-links{
+  flex: 1;
+  text-align: center;
+  font-family: "Handjet", sans-serif;
+  background: #262626;
+  width: 100%;
+  margin-top: 10px;
+}
+.nav-links ul li{
+  list-style: none;
+  display: inline-block;
+  padding: 20px 30px;
+  position: relative;
+}
+.nav-links ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 25px;
+}
+@media(max-width:700px){
+  .nav-links  ul li a{
+    font-size: 20px;
+  }
+}
+/*the bar appearing beneath the links*/
+.nav-links ul li::after{
+  content:'';
+  width:0%;
+  height: 2px;
+  background: #fff;
+  display:block;
+  margin:auto;
+  transition: 0.2s;
+}
+.nav-links ul li:hover::after{
+  width:100%
+}
+/*Need to fix: For some reason it stays behind the Big text when scrolling eventho it shouldn't.*/
+nav.sticky{
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 8%;
+  background: #262626;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: padding 1s;
+}
+
+/*Big text on Home Page*/
+.text-box{
+  width: 90%;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  text-align: center;
+}
+.text-box h1{
+  font-size: 62px;
+  color: #fff;
+}
+.text-box p{
+  margin: 10px 0 40px;
+  font-size: 20px;
+  color: #fff;
+}
+/*Need to fix: "Wecome! have a look around!" button that should automatically
+scroll to the "About us" section but doesn't do anything cuz idk how to do it*/
+.hero-btn{
+  font-family: "Handjet", sans-serif;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 34px;
+  font-size: 28px;
+  background:transparent;
+  position:relative;
+  cursor:pointer;
+}
+.hero-btn:hover{
+  border: 1px solid #262626;
+  background: #262626;
+  transition: 0.2s;
+}
+
+nav .fa{
+  display:none;
+}
+/*Need to fix:Phone version became crooked after sticky menu was added.
+ the 3 menu lines should be in the top-right corner. */
+@media(max-width: 700px){
+  .text-box h1{
+    font-size: 27px;
+  }
+  .nav-links ul li{
+    display: block;
+  }
+  .nav-links{
+    position: absolute;
+    background: #262626;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -210px;
+    text-align: left;
+    z-index: 2;
+    transition: 0.5s
+  }
+  nav .fa{
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-links ul{
+    padding:30px;
+  }
+}
+
+/*_______About us_______*/
+.About-us{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+}
+h1{
+  font-size: 40px;
+  font-weight: 600;
+  color: #262626
+}
+p{
+  color: #525252;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 22px;
+  padding: 10px;
+}
+
+.row{
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+}
+.About-us-col{
+  flex-basis: 31%;
+  background: #ffedf5;
+  border-radius: 30px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+  transition: 0.2s
+}
+h2{
+  font-family: "Handjet", sans-serif;
+  color: #262626;
+  text-align: center;
+  font-weight: 600;
+  margin: 5px 0;
+}
+.About-us-col:hover{
+  box-shadow: 0 0 20px 0px rgba(100,0,0,0.5);
+}
+@media(max-width:700px){
+  .row{
+    flex-direction: column;
+  }
+}
+
+/*_______Gallery selection on homepage________*/
+
+.Preview{
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+}
+.preview-col{
+  flex-basis: 23%;
+  border-radius: 50px;
+  margin-bottom: 30px;
+  position: relative;
+  overflow: hidden;
+}
+.preview-col img{
+  width: 100%;
+  display: block;
+}
+.layer{
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position:absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s;
+}
+
+.layer:hover{
+  background: rgba(0,0,0,0.7);
+}
+.layer h2{
+  width: 100%;
+  font-weight: 500;
+  color: white;
+  font-size: 30px;
+  bottom: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.2s;
+}
+.layer:hover h2{
+  bottom: 45%;
+  opacity: 1;
+}
+
+/*___________Footer___________*/
+.footer{
+  width: 100%;
+  text-align: center;
+  padding: 30px 0;
+}
+
+.footer h2{
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-family: "Montserrat", sans-serif;
+  font-weight:600;
+}
+
+@media (max-width:700px){
+  .footer h2{
+    font-size: 100%;
+  }
+  .footer p{
+    font-size: 100%;
+  }
+}
+
+.icons .fa-brands{
+  color: pink;
+  margin: 0 17px;
+  cursor: pointer;
+  padding: 18px 0;
+  font-size: 25px;
+}
+.fa-heart{
+  color: #f44336;
+  padding-left: 5px;
+}
+
+/*_______________ART PAGE__________*/
+
+.sub-header{
+  height: 50vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(25,9,25,0.7),rgba(25,9,25,0.7)),url(images/art-background.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  color: white;
+}
+/*Need to fix: The header doesn't show the Menu and the Title isn't visible on phone screens*/
+.sub-header h1{
+  margin-top: 35px;
+  color: #fff;
+}
+.art-page{
+  width: 80;
+  margin:auto;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.art-page-col{
+  flex-basis: 100%;
+  padding: 30px 2px;
+}
+.row h1{
+  text-align: center;
+  padding-top: 0;
+}
+.row p{
+  text-align: center;
+  padding:15px 0 25px;
+}
+.pink-btn{
+  border: 2px solid #2b2b2b;
+  background: transparent;
+  color: #2b2b2b;
+  margin: auto;
+}
+.pink-btn:hover{
+  color: pink;
+}
+.container{
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 8%;
+}
+.photo-gallery{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px 1fr));
+  grid-gap: 20px;
+
+}
+.column{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.photo img{
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+.photo-gallery img:hover{
+  box-shadow: 0 0 20px 0px rgba(100,0,0,0.5);
+}
+
+@media(max-width: 700px){
+  .photo-gallery{
+    flex-direction: column;
+  }
+}
+.full-img{
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+.full-image img{
+  width: 100%;
+  max-width: 100px;
+
+}
+.full-img span{
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 50px;
+  color: white;
+  cursor: pointer;
+}

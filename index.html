@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="with=decide-width, initial-scale=1.0">
+   <title>Home Page</title>
+   <link rel="stylesheet" href="style.css" type="text/css"/>
+   <!--the following is the font but it doesn't work-->
+   <link rel="stylesheet" href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css>
+</head>
+
+
+<body bgcolor=white>
+<section class="header">
+  <nav id="navbar">
+    <img src="images/logo.png" class="logo">
+    <div class="nav-links" id="navLinks">
+      <i class="fa fa-times" onclick="hideMenu()"></i>
+        <ul id="menu">
+          <li><a href="">HOME</a></li>
+          <li><a href="">ART</a></li> <!--animation in here too-->
+          <li><a href="">LETTERS</a></li>
+          <li><a href="">MUSIC</a></li>
+          <li><a href="">LOW EFFORT WORK</a></li>
+          <li><a href="">CONTACT US</a></li>
+        </ul>
+    </div>
+    <i class="fa fa-bars" onclick="showMenu()"></i>
+
+  </nav>
+
+<div class="text-box">
+  <h1>SuperMafuWorld</h1>
+  <p>This is a fan website where all the fanworks from all around the world<br>
+    are gathered in one big gallery as a gift to our dear Mafumafu!</p>
+    <a href="" class="hero-btn"> Welcome! Have a look around!</a>
+</div>
+
+</section>
+
+<!---____Art_____---->
+<section class="About-us">
+  <h1> About us </h1>
+
+  <div class="row">
+    <div class="About-us-col">
+      <h2>Our motivation</h2>
+      <p>After Mafumafu's incident on January 2024, we all felt
+        powerless and decided to do something to support Mafumafu at least emotionally.
+          We first started a Discord server and built up this
+           website to make our efforts more visible and accessible.</p>
+    </div>
+    <div class="About-us-col">
+      <h2>Our people</h2>
+      <p>We are a big group of people from every continent that are
+         gathered here for one purpose:
+         Love and support Mafumafu.<br>
+         Our community consists of: Artists, Writers, Musicians, Translators,
+          Video editors and many more talented people!</p>
+    </div>
+    <div class="About-us-col">
+      <h2>Our community</h2>
+      <p>The projects are mostly decided on our Discord server but we
+        also have a Twitter/X community where you can find funny memes,
+        translations, and other posts related to Utaite</p>
+    </div>
+  </div>
+</section>
+
+<!--_______preview homepage________-->
+
+<section class="Preview">
+
+  <h1>Our Gallery preview</h>
+
+  <div class="row">
+    <div class="preview-col">
+      <img src="images/artsec.png">
+      <div class="layer">
+        <h2>Fanarts</h2>
+      </div>
+    </div>
+    <div class="preview-col">
+      <img src="images/lettersec.png">
+      <div class="layer">
+        <h2>Fan Letters</h2>
+      </div>
+    </div>
+    <div class="preview-col">
+      <img src="images/musicsec.png">
+      <div class="layer">
+        <h2>Fan MV</h2>
+      </div>
+    </div>
+    <div class="preview-col">
+      <img src="images/loweffsec.png">
+      <div class="layer">
+        <h2>Low Effort Work</h2>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- Footer -->
+
+<section class="footer">
+  <h2>✩♬ ₊˚.🎧⋆☾⋆⁺₊✧ ( '﹃'⑉)⋆.˚✮🎧✮˚.⋆</h2>
+  <p>Everything here is made with love. Please refrain from stealing<br>
+     others' works and behave like a decent citizen of SuperMafuWorld.</p>
+
+  <div class="icons">
+    <a href="https://discord.gg/nQWg7t9v">
+      <i class="fa-brands fa-discord"></i>
+    </a>
+    <a href="https://x.com/i/communities/1831136008164815188">
+      <i class="fa-brands fa-twitter"></i>
+    </a>
+  </div>
+  <p>Made by @Sanabaka115 with her exclusive Pack of <i class="fa-solid fa-heart"></i></p>
+
+</section>
+
+<!--_____JavaScript for Toggle Menu_____-->
+<script>
+
+var navbar = document.getElementById("navbar")
+var menu = document.getElementById("menu")
+
+window.onscroll = function(){
+  if(window.pageYOffset >= menu.offsetTop){
+    navbar.classList.add("sticky");
+  }
+  else{
+    navbar.classList.remove("sticky");
+  }
+}
+
+var navLinks = document.getElementById("navLinks");
+function showMenu(){
+  navLinks.style.right = "0";
+}
+function hideMenu(){
+  navLinks.style.right = "-210px";
+}
+
+</script>
+
+</body>
+</html>
